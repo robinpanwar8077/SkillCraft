@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Trophy, Star, Medal, Users, Gem, Info } from "lucide-react";
 
@@ -78,134 +77,106 @@ export function Prizes() {
   ];
 
   return (
-    <section id="prizes" className="py-16 bg-white text-zinc-900 border-t border-zinc-100 relative overflow-hidden">
-      {/* Decorative Background */}
+    <section id="prizes" className="py-12 sm:py-20 bg-white text-zinc-900 border-t border-zinc-100 relative overflow-hidden">
       <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-blue-500/20 to-transparent"></div>
-      <div className="absolute -top-24 -left-24 w-64 h-64 bg-blue-50/50 rounded-full blur-[100px] pointer-events-none"></div>
-      
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
-        {/* Header Section - Compact */}
-        <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-12">
-          <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            className="max-w-xl"
-          >
+
+        {/* Simple Stacked Header for Mobile */}
+        <div className="flex flex-col lg:flex-row items-center justify-between gap-8 mb-12 text-center lg:text-left">
+          <motion.div initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} className="flex-1">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 border border-blue-100 text-blue-600 text-[10px] font-black uppercase tracking-widest mb-4">
               <Trophy className="w-3 h-3" />
               Championship Rewards
             </div>
-            <h2 className="text-3xl sm:text-5xl font-black text-zinc-900 tracking-tighter mb-4 leading-tight">
+            <h2 className="text-3xl sm:text-6xl font-black text-zinc-900 tracking-tighter mb-4 leading-tight">
               Tournament <span className="text-blue-600">Prize Pool</span>
             </h2>
-            <p className="text-zinc-500 text-sm font-medium leading-relaxed">
+            <p className="text-zinc-500 text-xs sm:text-base font-medium max-w-md mx-auto lg:mx-0">
               Huge rewards across multiple categories. Guaranteed distribution for top performers.
             </p>
           </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            className="bg-blue-600 p-6 sm:p-8 rounded-[2rem] text-white shadow-xl shadow-blue-200 flex flex-col items-center md:items-end justify-center"
-          >
-            <span className="text-blue-100 text-[10px] font-black uppercase tracking-[0.2em] mb-1">Total Fund</span>
-            <span className="text-4xl sm:text-5xl font-black tracking-tighter leading-none">₹15,00,000</span>
-            <div className="mt-3 flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-blue-100">
-              <Star className="w-3 h-3 fill-blue-300 text-blue-300" />
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} whileInView={{ opacity: 1, scale: 1 }} className="w-full max-w-xs sm:max-w-md bg-blue-600 p-6 sm:p-12 rounded-[2rem] sm:rounded-[2.5rem] text-white shadow-2xl shadow-blue-200">
+            <span className="block text-[10px] font-black uppercase tracking-[0.2em] mb-2 text-blue-100">Total Fund</span>
+            <span className="block text-3xl sm:text-6xl font-black tracking-tighter leading-none mb-3 sm:mb-4">₹15,00,000</span>
+            <div className="flex items-center justify-center lg:justify-start gap-2 text-[10px] font-bold uppercase tracking-widest text-blue-100">
+              <Star className="w-3 h-3 fill-blue-300" />
               Guaranteed Distribution
             </div>
           </motion.div>
         </div>
 
-        <Tabs defaultValue="main" className="space-y-8">
-          <div className="flex justify-center">
-            <TabsList className="bg-zinc-100/50 border border-zinc-200 p-1 rounded-2xl h-auto flex flex-wrap justify-center gap-1">
+        {/* Force Vertical Stack on Mobile */}
+        <Tabs defaultValue="main" className="flex flex-col w-full space-y-8">
+          <div className="w-full overflow-x-auto no-scrollbar scroll-smooth py-2">
+            <TabsList className="bg-zinc-100 p-1 rounded-2xl h-auto flex gap-1 w-max mx-auto border border-zinc-200">
               {[
                 { id: "main", label: "Main Open", icon: Trophy },
                 { id: "rating", label: "Rating", icon: Star },
                 { id: "special", label: "Special", icon: Gem },
                 { id: "age", label: "Age Groups", icon: Users },
               ].map((tab) => (
-                <TabsTrigger 
+                <TabsTrigger
                   key={tab.id}
-                  value={tab.id} 
-                  className="px-4 py-2 text-[10px] sm:text-xs font-black uppercase tracking-widest rounded-xl transition-all data-[state=active]:bg-white data-[state=active]:text-blue-600 data-[state=active]:shadow-sm text-zinc-500 flex items-center gap-2"
+                  value={tab.id}
+                  className="px-3 sm:px-5 py-2.5 sm:py-3 text-[9px] sm:text-xs font-black uppercase tracking-widest rounded-xl transition-all data-[state=active]:bg-white data-[state=active]:text-blue-600 data-[state=active]:shadow-sm text-zinc-500 flex items-center gap-1.5 whitespace-nowrap"
                 >
-                  <tab.icon className="w-3 h-3" />
+                  <tab.icon className="w-3 h-3 sm:w-3.5 sm:h-3.5 shrink-0" />
                   {tab.label}
                 </TabsTrigger>
               ))}
             </TabsList>
           </div>
 
-          <TabsContent value="main" className="outline-none focus:ring-0">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              {/* Top 3 Spotlight */}
-              <div className="space-y-4">
-                <h4 className="text-[10px] font-black text-zinc-400 uppercase tracking-widest ml-1">Top Podium</h4>
-                <div className="grid grid-cols-1 gap-3">
+          <TabsContent value="main" className="w-full outline-none">
+            <div className="flex flex-col lg:grid lg:grid-cols-2 gap-8 lg:gap-14">
+              <div className="w-full space-y-6">
+                <h4 className="text-[10px] font-black text-zinc-400 uppercase tracking-widest text-center lg:text-left">Top Podium</h4>
+                <div className="flex flex-col gap-3 sm:gap-4">
                   {mainPrizes.slice(0, 3).map((prize, idx) => (
-                    <motion.div 
-                      key={idx}
-                      initial={{ opacity: 0, y: 10 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      transition={{ delay: idx * 0.1 }}
-                      className={`p-5 rounded-3xl border flex items-center justify-between shadow-sm ${
-                        idx === 0 ? 'bg-blue-50 border-blue-200' : 'bg-white border-zinc-200'
-                      }`}
-                    >
-                      <div className="flex items-center gap-4">
-                        <div className={`w-12 h-12 flex items-center justify-center rounded-2xl font-black text-lg ${
-                          idx === 0 ? 'bg-blue-600 text-white' : 
-                          idx === 1 ? 'bg-zinc-200 text-zinc-900' : 
-                          'bg-zinc-100 text-zinc-500'}`}>
+                    <div key={idx} className={`p-4 sm:p-6 rounded-[1.5rem] sm:rounded-[2rem] border flex items-center justify-between shadow-sm ${idx === 0 ? 'bg-blue-50 border-blue-200' : 'bg-white border-zinc-200'}`}>
+                      <div className="flex items-center gap-3 sm:gap-4">
+                        <div className={`w-10 h-10 sm:w-14 sm:h-14 flex items-center justify-center rounded-xl sm:rounded-2xl font-black text-base sm:text-xl shrink-0 ${idx === 0 ? 'bg-blue-600 text-white' : 'bg-zinc-100 text-zinc-400'}`}>
                           {idx + 1}
                         </div>
                         <div>
-                          <p className={`font-black uppercase tracking-tighter ${idx === 0 ? "text-blue-700" : "text-zinc-900"}`}>{prize.rank}</p>
-                          <span className="text-[10px] font-bold text-zinc-400 uppercase tracking-widest">Placement</span>
+                          <p className={`text-sm sm:text-base font-black uppercase tracking-tighter ${idx === 0 ? "text-blue-700" : "text-zinc-900"}`}>{prize.rank}</p>
+                          <span className="text-[9px] sm:text-[10px] font-bold text-zinc-400 uppercase">Placement</span>
                         </div>
                       </div>
                       <div className="text-right">
-                        <p className={`text-2xl font-black tracking-tighter ${idx === 0 ? "text-blue-600" : "text-zinc-900"}`}>{prize.amount}</p>
-                        <span className="text-[10px] font-bold text-zinc-400 uppercase tracking-widest">Trophy + Cash</span>
+                        <p className={`text-lg sm:text-2xl font-black tracking-tighter ${idx === 0 ? "text-blue-600" : "text-zinc-900"}`}>{prize.amount}</p>
+                        <span className="text-[9px] sm:text-[10px] font-bold text-zinc-400 uppercase tracking-widest">Prize + Trophy</span>
                       </div>
-                    </motion.div>
+                    </div>
                   ))}
                 </div>
               </div>
 
-              {/* Other Ranks - Compact Table */}
-              <div className="bg-zinc-50/50 rounded-[2rem] border border-zinc-200 p-6 overflow-hidden">
-                <h4 className="text-[10px] font-black text-zinc-400 uppercase tracking-widest mb-4 ml-1">Cash Prizes (4th - 40th)</h4>
-                <div className="max-h-[300px] overflow-y-auto no-scrollbar pr-2">
-                  <div className="space-y-2">
-                    {mainPrizes.slice(3).map((prize, idx) => (
-                      <div key={idx} className="flex justify-between items-center py-2.5 px-4 bg-white rounded-xl border border-zinc-100 shadow-sm">
-                        <span className="text-xs font-black text-zinc-900 uppercase tracking-tight w-24">{prize.rank}</span>
-                        <div className="h-px flex-grow bg-zinc-100 mx-4 border-t border-dashed" />
-                        <span className="text-sm font-black text-blue-600 tabular-nums">{prize.amount}</span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-                <div className="mt-4 flex items-center justify-center gap-2 text-zinc-400 text-[10px] font-bold uppercase tracking-widest">
-                  <Info className="w-3 h-3" />
-                  Scroll to view more
+              <div className="w-full bg-zinc-50 p-4 sm:p-10 rounded-[2rem] sm:rounded-[2.5rem] border border-zinc-200 overflow-hidden">
+                <h4 className="text-[10px] font-black text-zinc-400 uppercase tracking-widest mb-4 sm:mb-6">Cash Prizes (4th - 40th)</h4>
+                <div className="space-y-2 sm:space-y-3 max-h-[400px] overflow-y-auto no-scrollbar scroll-smooth">
+                  {mainPrizes.slice(3).map((prize, idx) => (
+                    <div key={idx} className="flex justify-between items-center py-3 sm:py-4 px-4 sm:px-6 bg-white rounded-xl sm:rounded-2xl border border-zinc-100 shadow-sm">
+                      <span className="text-[11px] sm:text-xs font-black text-zinc-900 uppercase w-20 sm:w-24 shrink-0">{prize.rank}</span>
+                      <div className="h-px flex-grow bg-zinc-100 mx-2 sm:mx-4 border-t border-dashed" />
+                      <span className="text-xs sm:text-sm font-black text-blue-600 tabular-nums shrink-0">{prize.amount}</span>
+                    </div>
+                  ))}
                 </div>
               </div>
             </div>
           </TabsContent>
 
-          <TabsContent value="rating" className="outline-none">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <TabsContent value="rating" className="w-full outline-none">
+            <div className="flex flex-col sm:grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {ratingCategories.map((cat, idx) => (
-                <div key={idx} className="bg-white border border-zinc-200 rounded-3xl p-5 shadow-sm hover:shadow-md transition-shadow">
-                  <h4 className="text-sm font-black text-zinc-900 tracking-tight mb-4 border-b border-zinc-100 pb-2 flex items-center gap-2">
-                    <Star className="w-4 h-4 text-blue-600 fill-blue-50" />
+                <div key={idx} className="bg-white border border-zinc-200 rounded-[2rem] p-8 shadow-sm">
+                  <h4 className="text-base font-black text-zinc-900 tracking-tight mb-6 pb-4 border-b border-zinc-100 flex items-center gap-2">
+                    <Star className="w-5 h-5 text-blue-600" />
                     {cat.title}
                   </h4>
-                  <div className="space-y-2">
+                  <div className="space-y-3">
                     {cat.prizes.map((p, pi) => (
                       <div key={pi} className="flex justify-between text-[11px] font-bold">
                         <span className="text-zinc-400 uppercase">{p.rank}</span>
@@ -218,21 +189,21 @@ export function Prizes() {
             </div>
           </TabsContent>
 
-          <TabsContent value="special" className="outline-none">
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          <TabsContent value="special" className="w-full outline-none">
+            <div className="flex flex-col sm:grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {specialPrizes.map((prize, idx) => (
-                <div key={idx} className="p-5 bg-zinc-50/50 border border-zinc-200 rounded-3xl hover:bg-white transition-all">
-                  <div className="flex items-center gap-3 mb-4">
-                    <div className="w-8 h-8 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center">
-                      <Gem className="w-4 h-4" />
+                <div key={idx} className="p-8 bg-zinc-50 border border-zinc-200 rounded-[2rem] shadow-sm">
+                  <div className="flex items-center gap-3 mb-6">
+                    <div className="w-10 h-10 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center">
+                      <Gem className="w-5 h-5" />
                     </div>
-                    <h5 className="text-xs font-black text-zinc-900 uppercase tracking-tight">{prize.category}</h5>
+                    <h5 className="text-sm font-black text-zinc-900 uppercase">{prize.category}</h5>
                   </div>
-                  <div className="space-y-1.5">
+                  <div className="space-y-3">
                     {prize.rewards.map((reward, ridx) => (
-                      <div key={ridx} className="text-[10px] font-bold text-zinc-600 flex justify-between">
-                        <span>{reward.split(" - ")[0]}</span>
-                        <span className="text-blue-600 font-black uppercase">{reward.split(" - ")[1]}</span>
+                      <div key={ridx} className="text-xs font-bold text-zinc-600 flex justify-between">
+                        <span className="uppercase">{reward.split(" - ")[0]}</span>
+                        <span className="text-blue-600 font-black">{reward.split(" - ")[1]}</span>
                       </div>
                     ))}
                   </div>
@@ -241,28 +212,25 @@ export function Prizes() {
             </div>
           </TabsContent>
 
-          <TabsContent value="age" className="outline-none">
-            <Tabs defaultValue="boys" className="space-y-6">
+          <TabsContent value="age" className="w-full outline-none">
+            <Tabs defaultValue="boys" className="flex flex-col space-y-8">
               <div className="flex justify-center">
-                <TabsList className="bg-blue-50 p-1 rounded-xl h-auto border border-blue-100">
-                  <TabsTrigger value="boys" className="px-5 py-1.5 text-[10px] sm:text-xs font-bold rounded-lg data-[state=active]:bg-blue-600 data-[state=active]:text-white">Boys</TabsTrigger>
-                  <TabsTrigger value="girls" className="px-5 py-1.5 text-[10px] sm:text-xs font-bold rounded-lg data-[state=active]:bg-blue-600 data-[state=active]:text-white">Girls</TabsTrigger>
+                <TabsList className="bg-blue-50 p-1 rounded-2xl h-auto border border-blue-100">
+                  <TabsTrigger value="boys" className="px-6 sm:px-10 py-2.5 sm:py-3 text-xs font-black uppercase rounded-xl data-[state=active]:bg-blue-600 data-[state=active]:text-white">Boys</TabsTrigger>
+                  <TabsTrigger value="girls" className="px-6 sm:px-10 py-2.5 sm:py-3 text-xs font-black uppercase rounded-xl data-[state=active]:bg-blue-600 data-[state=active]:text-white">Girls</TabsTrigger>
                 </TabsList>
               </div>
-              
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+              <div className="flex flex-col sm:grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
                 {ageCategories.map((age, idx) => (
-                  <div key={idx} className="bg-white border border-zinc-200 rounded-3xl p-5 shadow-sm">
-                    <div className="flex items-center justify-between mb-4 border-b border-zinc-100 pb-2">
-                      <h5 className="text-sm font-black text-zinc-900 tracking-tight">{age}</h5>
-                      <div className="w-6 h-6 rounded-lg bg-blue-50 flex items-center justify-center">
-                        <Users className="w-3 h-3 text-blue-600" />
-                      </div>
-                    </div>
-                    <div className="space-y-1.5">
+                  <div key={idx} className="bg-white border border-zinc-200 rounded-[2rem] p-8 shadow-sm">
+                    <h5 className="text-base font-black text-zinc-900 mb-6 pb-4 border-b border-zinc-100 flex items-center justify-between">
+                      {age}
+                      <Users className="w-4 h-4 text-blue-600" />
+                    </h5>
+                    <div className="space-y-3">
                       {agePrizeRankings.map((p, pi) => (
-                        <div key={pi} className="flex justify-between text-[10px] font-bold">
-                          <span className="text-zinc-400">{p.rank}</span>
+                        <div key={pi} className="flex justify-between text-[11px] font-bold">
+                          <span className="text-zinc-400 uppercase">{p.rank}</span>
                           <span className="text-zinc-900 font-black">{p.amount}</span>
                         </div>
                       ))}
@@ -274,13 +242,10 @@ export function Prizes() {
           </TabsContent>
         </Tabs>
 
-        {/* Info badges - Compact */}
-        <div className="mt-12 flex flex-wrap justify-center gap-4 text-[9px] font-black text-zinc-400 uppercase tracking-widest pt-8 border-t border-zinc-100">
+        <div className="mt-20 flex flex-wrap justify-center gap-8 text-[10px] font-black text-zinc-400 uppercase tracking-[0.2em] pt-12 border-t border-zinc-100 italic">
           {["Prizes non-sharable", "Tax rules applicable", "Age proof mandatory", "One prize per player"].map((info, idx) => (
-            <div key={idx} className="flex items-center gap-2 group">
-              <div className="w-5 h-5 rounded-full bg-zinc-50 border border-zinc-200 flex items-center justify-center text-blue-600">
-                <Info className="w-2.5 h-2.5" />
-              </div>
+            <div key={idx} className="flex items-center gap-2">
+              <div className="w-1.5 h-1.5 rounded-full bg-blue-500"></div>
               <span>{info}</span>
             </div>
           ))}
@@ -289,4 +254,3 @@ export function Prizes() {
     </section>
   );
 }
-

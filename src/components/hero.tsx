@@ -2,7 +2,7 @@
 
 import { motion, Variants } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { CalendarDays, MapPin, Trophy, Sparkles, ChevronRight, GraduationCap, ShieldCheck } from "lucide-react";
+import { CalendarDays, MapPin, Trophy, Sparkles, ChevronRight, GraduationCap, ShieldCheck, Medal } from "lucide-react";
 
 export function Hero() {
   const containerVariants: Variants = {
@@ -69,7 +69,7 @@ export function Hero() {
         {/* Main Title - Tournament Name */}
         <motion.h1
           variants={itemVariants}
-          className="text-3xl sm:text-5xl lg:text-7xl font-black tracking-tight mb-4 sm:mb-6 leading-[1.1] max-w-4xl"
+          className="text-3xl sm:text-5xl lg:text-7xl font-black tracking-tight mb-4 sm:mb-6 leading-[1.1] max-w-4xl px-2"
         >
           <span className="text-zinc-950">2nd SkillCraft International</span> <br />
           <span className="text-transparent bg-clip-text bg-gradient-to-b from-blue-400 via-blue-600 to-blue-800 drop-shadow-sm">
@@ -78,21 +78,27 @@ export function Hero() {
         </motion.h1>
 
         {/* Info Highlights */}
-        <motion.div variants={itemVariants} className="mb-10 sm:mb-12">
-          <div className="text-zinc-500 text-xs sm:text-base font-semibold flex flex-wrap items-center justify-center gap-2 sm:gap-4 uppercase tracking-widest text-center px-4">
+        <motion.div variants={itemVariants} className="mb-8 sm:mb-12">
+          <div className="text-zinc-500 text-[10px] sm:text-base font-semibold flex flex-wrap items-center justify-center gap-x-4 gap-y-2 uppercase tracking-widest text-center px-4">
             <div className="flex items-center gap-2">
-              <Trophy className="w-4 h-4 text-blue-600" />
+              <Trophy className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-blue-600" />
               <span>Over 100 Cash Prizes</span>
             </div>
-            <span className="w-1.5 h-1.5 bg-blue-400 rounded-full hidden sm:block" />
-            <span>125+ Trophies</span>
-            <span className="w-1.5 h-1.5 bg-blue-400 rounded-full hidden sm:block" />
-            <span>Medals for Everyone</span>
+            <span className="w-1 h-1 bg-blue-300 rounded-full hidden sm:block" />
+            <div className="flex items-center gap-2">
+              <Sparkles className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-blue-600" />
+              <span>125+ Trophies</span>
+            </div>
+            <span className="w-1 h-1 bg-blue-300 rounded-full hidden sm:block" />
+            <div className="flex items-center gap-2">
+              <Medal className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-blue-600" />
+              <span>Medals for Everyone</span>
+            </div>
           </div>
         </motion.div>
 
         {/* Action Grid */}
-        <motion.div variants={itemVariants} className="w-full grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 max-w-2xl mb-10 sm:mb-12">
+        <motion.div variants={itemVariants} className="w-full grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 max-w-2xl mb-10 sm:mb-12 px-4 sm:px-0">
           <div className="bg-white/60 backdrop-blur-md border border-zinc-200 p-4 sm:p-5 rounded-3xl flex flex-row sm:flex-col items-center justify-center gap-4 sm:gap-2 group hover:border-blue-400/50 hover:bg-white transition-all text-left sm:text-center shadow-sm hover:shadow-md">
             <CalendarDays className="w-6 h-6 sm:w-8 sm:h-8 text-blue-600 group-hover:scale-110 transition-transform flex-shrink-0" />
             <div>
