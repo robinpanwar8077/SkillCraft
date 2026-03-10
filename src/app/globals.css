@@ -4,11 +4,39 @@
   .no-scrollbar::-webkit-scrollbar {
     display: none;
   }
+
   .no-scrollbar {
     -ms-overflow-style: none;
     scrollbar-width: none;
   }
 }
+
+/* ── Ticker & shimmer keyframes ── */
+@keyframes ticker {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(200%);
+  }
+}
+
+@theme inline {
+  --animate-ticker: ticker 22s linear infinite;
+  --animate-shimmer: shimmer 3s linear infinite;
+}
+
 
 :root {
   --background: #ffffff;

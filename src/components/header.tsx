@@ -26,6 +26,26 @@ export function Header() {
 
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${isScrolled ? "py-3" : "py-5"}`}>
+
+      {/* ── Ticker strip ── */}
+      <div className="w-full bg-blue-600 overflow-hidden h-6 flex items-center mb-2 relative">
+        <div
+          className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent pointer-events-none"
+          style={{ animation: "shimmer 3s linear infinite" }}
+        />
+        <div
+          className="flex whitespace-nowrap will-change-transform"
+          style={{ animation: "ticker 20s linear infinite" }}
+        >
+          {Array.from({ length: 12 }).map((_, i) => (
+            <span key={i} className="inline-flex items-center gap-4 px-6 text-[10px] font-black uppercase tracking-[0.2em] text-white/90">
+              ♟ Delhi&apos;s Biggest Chess Tournament
+              <span className="text-blue-300">✦</span>
+            </span>
+          ))}
+        </div>
+      </div>
+
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
         <div className={`relative flex items-center justify-between px-6 py-2.5 rounded-[2rem] border transition-all duration-500 ${isScrolled ? "bg-white/70 backdrop-blur-xl border-white/20 shadow-[0_8px_32px_rgba(0,0,0,0.05)]" : "bg-white/30 backdrop-blur-md border-white/10 shadow-sm"}`}>
           <div className="flex items-center group cursor-pointer">
@@ -39,7 +59,7 @@ export function Header() {
               <a
                 key={item.name}
                 href={item.href}
-                className="px-4 py-2 rounded-xl text-sm font-black text-zinc-500 hover:text-blue-600 hover:bg-blue-50/50 transition-all uppercase tracking-widest"
+                className="px-4 py-2 rounded-xl text-sm font-black text-white hover:text-blue-600 hover:bg-blue-50/50 transition-all uppercase tracking-widest"
               >
                 {item.name}
               </a>
