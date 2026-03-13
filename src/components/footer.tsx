@@ -72,13 +72,10 @@ export function Footer() {
 
           {/* Organizer */}
           <div className="text-center md:text-left">
-            <h4 className="text-zinc-900 font-black mb-6 uppercase tracking-widest text-[10px]">Organized By</h4>
+            <h4 className="text-zinc-900 font-black mb-6 uppercase tracking-widest text-[10px]">Organized & Marketed By</h4>
             <div className="bg-white p-6 rounded-[2rem] border border-zinc-100 shadow-xl shadow-zinc-200/50 max-w-sm mx-auto md:mx-0">
-              <p className="text-blue-600 font-black text-lg mb-1 tracking-tight">SkillCraft International</p>
-              <p className="text-zinc-400 font-bold text-[10px] mb-4 uppercase tracking-widest">SkillCraft Sports & Media Ltd.</p>
-              <Button className="w-full bg-zinc-900 text-white hover:bg-black text-[10px] h-10 font-black uppercase tracking-widest rounded-xl transition-all shadow-md" asChild>
-                <a href="https://skillcraft.co.in" target="_blank" rel="noopener noreferrer">Official Website</a>
-              </Button>
+              <p className="text-blue-600 font-black text-lg mb-1 tracking-tight">EventAtScale</p>
+              <p className="text-zinc-400 font-bold text-[10px] mb-0 uppercase tracking-widest leading-relaxed">EVENT MANAGEMENT & MARKETING SOLUTIONS</p>
             </div>
           </div>
 

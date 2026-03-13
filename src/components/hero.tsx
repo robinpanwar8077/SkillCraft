@@ -27,21 +27,24 @@ export function Hero() {
   };
 
   return (
-    <section className="relative min-h-[100svh] flex items-center justify-center overflow-hidden pt-32 pb-16 sm:pt-40 sm:pb-24 px-4 sm:px-6">
+    <section className="relative min-h-[100svh] flex items-center justify-center overflow-hidden pt-36 pb-16 sm:pt-40 sm:pb-24 px-4 sm:px-6">
 
-      {/* ── Full-bleed background image ── */}
-      <div className="absolute inset-0 z-0">
-        <Image
-          src="/chess-tournament.png"
-          alt="Chess tournament background"
-          fill
-          className="object-cover object-center"
-          priority
-        />
+      {/* ── Video Background ── */}
+      <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
+        <div className="absolute inset-0 w-full h-full scale-150 sm:scale-125">
+          <iframe
+            src="https://www.youtube.com/embed/WxM9_ADHBN4?autoplay=1&mute=1&loop=1&playlist=WxM9_ADHBN4&start=15&end=45&controls=0&showinfo=0&rel=0&iv_load_policy=3&modestbranding=1"
+            className="w-full h-full object-cover"
+            frameBorder="0"
+            allow="autoplay; encrypted-media"
+            allowFullScreen
+            style={{ width: "100%", height: "100%", pointerEvents: "none" }}
+          ></iframe>
+        </div>
         {/* dark gradient so text pops */}
-        <div className="absolute inset-0 bg-gradient-to-b from-zinc-950/85 via-zinc-900/75 to-zinc-950/90" />
+        <div className="absolute inset-0 bg-gradient-to-b from-zinc-950/80 via-zinc-900/60 to-zinc-950/85" />
         {/* subtle blue tint */}
-        <div className="absolute inset-0 bg-blue-950/25" />
+        <div className="absolute inset-0 bg-blue-950/20" />
       </div>
 
       {/* ── Animated colour blobs ── */}
@@ -122,13 +125,18 @@ export function Hero() {
               <span className="text-white font-bold text-sm sm:text-lg">27th – 29th March 2026</span>
             </div>
           </div>
-          <div className="bg-white/10 backdrop-blur-md border border-white/20 p-4 sm:p-5 rounded-3xl flex flex-row sm:flex-col items-center justify-center gap-4 sm:gap-2 group hover:border-blue-400/50 hover:bg-white/15 transition-all text-left sm:text-center shadow-sm">
+          <a 
+            href="https://maps.google.com/?q=Thyagraj+Sports+Complex+INA+New+Delhi" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="bg-white/10 backdrop-blur-md border border-white/20 p-4 sm:p-5 rounded-3xl flex flex-row sm:flex-col items-center justify-center gap-4 sm:gap-2 group hover:border-blue-400/50 hover:bg-white/15 transition-all text-left sm:text-center shadow-sm"
+          >
             <MapPin className="w-6 h-6 sm:w-8 sm:h-8 text-blue-400 group-hover:scale-110 transition-transform flex-shrink-0" />
             <div>
               <span className="block text-[8px] sm:text-[10px] text-white/40 uppercase font-black tracking-widest mb-1">Venue</span>
               <span className="text-white font-bold text-sm sm:text-lg">Thyagraj Sports Complex</span>
             </div>
-          </div>
+          </a>
         </motion.div>
 
         {/* CTA Buttons */}

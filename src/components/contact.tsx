@@ -83,7 +83,7 @@ export function Contact() {
                     <h3 className="text-lg sm:text-xl font-black text-zinc-900 uppercase tracking-tight mb-1">Thyagraj Sports Complex</h3>
                     <p className="text-zinc-500 text-[10px] sm:text-xs font-bold uppercase tracking-widest mb-3">INA, New Delhi - 110023</p>
                     
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-[10px] font-black uppercase tracking-wider">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-[10px] font-black uppercase tracking-wider mb-4">
                       <div className="flex items-center gap-2 text-blue-600 bg-blue-50 px-3 py-1.5 rounded-xl border border-blue-100">
                         <span className="w-1.5 h-1.5 rounded-full bg-blue-600 animate-pulse"></span>
                         Metro: Dilli Haat-INA (Yellow & Pink)
@@ -93,6 +93,13 @@ export function Contact() {
                         A/C Arena & Parking
                       </div>
                     </div>
+                    
+                    <Button variant="outline" size="sm" className="h-9 px-4 rounded-xl border-zinc-200 hover:border-blue-600 hover:text-blue-600 font-black text-[9px] uppercase tracking-widest bg-white" asChild>
+                      <a href="https://maps.google.com/?q=Thyagraj+Sports+Complex+INA+New+Delhi" target="_blank" rel="noopener noreferrer">
+                        <MapPin className="w-3 h-3 mr-2" />
+                        View on Google Maps
+                      </a>
+                    </Button>
                   </div>
                 </div>
               </div>
@@ -123,23 +130,31 @@ export function Contact() {
                   {/* IA Atul Mishra with Email */}
                   <div className="p-3 rounded-2xl bg-zinc-50/50 border border-zinc-100/50 hover:bg-blue-50/30 hover:border-blue-100 transition-all flex flex-col justify-center col-span-1 sm:col-span-2">
                     <p className="text-[8px] font-black text-blue-400 uppercase tracking-widest leading-none mb-1">Chief Arbiter</p>
-                    <div className="flex flex-wrap items-center justify-between gap-2">
+                    <div className="flex flex-col justify-center gap-1">
                       <p className="text-zinc-900 font-black text-xs sm:text-sm tracking-tight">IA Atul Mishra</p>
-                      <p className="text-blue-600 font-bold text-[9px] sm:text-xs truncate uppercase tracking-tighter">mishraatul150@gmail.com</p>
+                      <p className="text-blue-600 font-black text-[9px] sm:text-xs truncate uppercase tracking-tighter">mishraatul150@gmail.com</p>
                     </div>
                   </div>
                 </div>
 
-                <div className="mt-6 pt-6 border-t border-zinc-100 flex flex-col sm:flex-row items-center justify-between gap-4">
-                  <div className="flex items-center gap-2">
-                    <Mail className="w-4 h-4 text-zinc-300" />
-                    <span className="text-[10px] font-bold text-zinc-400 uppercase tracking-widest select-all">Teamskillcraft@skillcraft.co.in</span>
+                <div className="mt-8 pt-8 border-t border-zinc-100">
+                  <div className="flex items-center gap-2 mb-4 bg-blue-50 py-2 px-4 rounded-xl border border-blue-100 w-full justify-center sm:justify-start">
+                    <Mail className="w-4 h-4 text-blue-600" />
+                    <span className="text-[10px] sm:text-xs font-black text-blue-600 uppercase tracking-widest select-all">Teamskillcraft@skillcraft.co.in</span>
                   </div>
-                  <Button variant="outline" className="h-10 rounded-xl text-[10px] font-black uppercase tracking-widest border-zinc-200 hover:border-blue-600 hover:text-blue-600 bg-white shadow-sm" asChild>
-                    <a href="https://forms.gle/w8ADhgE5eSAzZBH39" target="_blank" rel="noopener noreferrer">
-                      <Globe className="w-3.5 h-3.5 mr-2" /> Book Stay
-                    </a>
-                  </Button>
+
+                  <div className="space-y-4">
+                    <div className="flex items-center gap-2">
+                      <div className="h-px flex-grow bg-blue-100" />
+                      <span className="text-[10px] font-black text-blue-600 bg-blue-50 px-4 py-1.5 rounded-full border border-blue-100 uppercase tracking-[0.2em]">Official Accommodation</span>
+                      <div className="h-px flex-grow bg-blue-100" />
+                    </div>
+                    <Button variant="outline" className="w-full h-12 rounded-2xl text-[10px] font-black uppercase tracking-widest border-zinc-200 hover:border-blue-600 hover:text-blue-600 bg-white shadow-sm" asChild>
+                      <a href="https://forms.gle/w8ADhgE5eSAzZBH39" target="_blank" rel="noopener noreferrer">
+                        <Globe className="w-3.5 h-3.5 mr-2" /> Book Stay
+                      </a>
+                    </Button>
+                  </div>
                 </div>
               </div>
             </div>

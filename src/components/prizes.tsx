@@ -153,13 +153,13 @@ export function Prizes() {
                 </div>
               </div>
 
-              <div className="w-full bg-zinc-50 p-4 sm:p-10 rounded-[2rem] sm:rounded-[2.5rem] border border-zinc-200 overflow-hidden">
+              <div className="w-full bg-white p-4 sm:p-10 rounded-[2rem] sm:rounded-[2.5rem] border border-zinc-200 overflow-hidden">
                 <h4 className="text-[10px] font-black text-zinc-400 uppercase tracking-widest mb-4 sm:mb-6">Cash Prizes (4th - 40th)</h4>
-                <div className="space-y-2 sm:space-y-3 max-h-[400px] overflow-y-auto no-scrollbar scroll-smooth">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-2">
                   {mainPrizes.slice(3).map((prize, idx) => (
-                    <div key={idx} className="flex justify-between items-center py-3 sm:py-4 px-4 sm:px-6 bg-white rounded-xl sm:rounded-2xl border border-zinc-100 shadow-sm">
+                    <div key={idx} className="flex justify-between items-center py-2 sm:py-3 px-4 sm:px-6 bg-zinc-50 rounded-xl sm:rounded-2xl border border-zinc-100 shadow-sm">
                       <span className="text-[11px] sm:text-xs font-black text-zinc-900 uppercase w-20 sm:w-24 shrink-0">{prize.rank}</span>
-                      <div className="h-px flex-grow bg-zinc-100 mx-2 sm:mx-4 border-t border-dashed" />
+                      <div className="h-px flex-grow bg-zinc-200/50 mx-2 sm:mx-4 border-t border-dashed" />
                       <span className="text-xs sm:text-sm font-black text-blue-600 tabular-nums shrink-0">{prize.amount}</span>
                     </div>
                   ))}
@@ -192,16 +192,16 @@ export function Prizes() {
           <TabsContent value="special" className="w-full outline-none">
             <div className="flex flex-col sm:grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {specialPrizes.map((prize, idx) => (
-                <div key={idx} className="p-8 bg-zinc-50 border border-zinc-200 rounded-[2rem] shadow-sm">
+                <div key={idx} className="p-8 bg-white border border-zinc-200 rounded-[2rem] shadow-sm">
                   <div className="flex items-center gap-3 mb-6">
-                    <div className="w-10 h-10 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center">
+                    <div className="w-10 h-10 bg-blue-600 text-white rounded-xl flex items-center justify-center">
                       <Gem className="w-5 h-5" />
                     </div>
                     <h5 className="text-sm font-black text-zinc-900 uppercase">{prize.category}</h5>
                   </div>
                   <div className="space-y-3">
                     {prize.rewards.map((reward, ridx) => (
-                      <div key={ridx} className="text-xs font-bold text-zinc-600 flex justify-between">
+                      <div key={ridx} className="text-xs font-bold text-zinc-900 flex justify-between">
                         <span className="uppercase">{reward.split(" - ")[0]}</span>
                         <span className="text-blue-600 font-black">{reward.split(" - ")[1]}</span>
                       </div>
@@ -242,10 +242,10 @@ export function Prizes() {
           </TabsContent>
         </Tabs>
 
-        <div className="mt-20 flex flex-wrap justify-center gap-8 text-[10px] font-black text-zinc-400 uppercase tracking-[0.2em] pt-12 border-t border-zinc-100 italic">
+        <div className="mt-20 flex flex-wrap justify-center gap-8 text-[11px] font-black text-zinc-900 uppercase tracking-[0.2em] pt-12 border-t-2 border-zinc-200 bg-blue-50/50 py-10 rounded-[3rem]">
           {["Prizes non-sharable", "Tax rules applicable", "Age proof mandatory", "One prize per player"].map((info, idx) => (
-            <div key={idx} className="flex items-center gap-2">
-              <div className="w-1.5 h-1.5 rounded-full bg-blue-500"></div>
+            <div key={idx} className="flex items-center gap-3 bg-white px-6 py-3 rounded-full shadow-sm border border-zinc-100 flex-shrink-0">
+              <div className="w-2 h-2 rounded-full bg-blue-600 shadow-[0_0_10px_rgba(37,99,235,0.5)]"></div>
               <span>{info}</span>
             </div>
           ))}
