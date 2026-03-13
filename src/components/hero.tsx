@@ -31,16 +31,17 @@ export function Hero() {
 
       {/* ── Video Background ── */}
       <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
-        <div className="absolute inset-0 w-full h-full scale-150 sm:scale-125">
-          <iframe
-            src="https://www.youtube.com/embed/WxM9_ADHBN4?autoplay=1&mute=1&loop=1&playlist=WxM9_ADHBN4&start=15&end=45&controls=0&showinfo=0&rel=0&iv_load_policy=3&modestbranding=1"
-            className="w-full h-full object-cover"
-            frameBorder="0"
-            allow="autoplay; encrypted-media"
-            allowFullScreen
-            style={{ width: "100%", height: "100%", pointerEvents: "none" }}
-          ></iframe>
-        </div>
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover"
+          poster="/chess-tournament.png"
+        >
+          <source src="/skillcraftvideo.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
         {/* dark gradient so text pops */}
         <div className="absolute inset-0 bg-gradient-to-b from-zinc-950/80 via-zinc-900/60 to-zinc-950/85" />
         {/* subtle blue tint */}
