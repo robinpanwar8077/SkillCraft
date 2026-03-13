@@ -32,8 +32,11 @@ export function Reviews() {
           >
             <h2 className="text-sm font-black tracking-widest text-blue-600 uppercase mb-4">Event Legacy</h2>
             <h3 className="text-4xl font-extrabold tracking-tight text-zinc-900 sm:text-7xl mb-6 tracking-tighter uppercase">Tournament Highlights</h3>
-            <p className="mt-4 text-lg text-zinc-500 font-medium max-w-2xl mx-auto">
+            <p className="mt-4 text-lg text-zinc-500 font-medium max-w-none mx-auto whitespace-nowrap hidden md:block">
               Relive the intensity and premium atmosphere of our past editions held at world-class arenas.
+            </p>
+            <p className="mt-4 text-base text-zinc-500 font-medium max-w-xs mx-auto md:hidden">
+              Relive the intensity and premium atmosphere of our past editions.
             </p>
           </motion.div>
         </div>
