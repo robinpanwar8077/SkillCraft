@@ -22,11 +22,13 @@ export function Footer() {
             <p className="text-zinc-500 text-sm font-medium leading-relaxed">
               Empowering the next generation of chess champions through world-class international tournaments and premium competitive experiences.
             </p>
-            <div className="flex items-center gap-4">
-              <a href="#" className="w-8 h-8 rounded-full bg-white border border-zinc-200 flex items-center justify-center text-zinc-400 hover:text-blue-600 hover:border-blue-600 transition-all shadow-sm">
-                <ShieldCheck className="w-4 h-4" />
-              </a>
-              <span className="text-xs text-zinc-400 font-bold uppercase tracking-widest">Under the aegis of AICF & DCA</span>
+            <div className="pt-4 flex flex-col sm:flex-row sm:items-center gap-4">
+              <span className="text-[10px] text-blue-600 font-black uppercase tracking-[0.2em] whitespace-nowrap">Under the aegis of</span>
+              <div className="flex items-center gap-4">
+                <img src="/dca.jpg" alt="DCA" className="h-7 w-auto object-contain" />
+                <div className="w-px h-4 bg-zinc-200"></div>
+                <img src="/AICF_logo.svg.png" alt="AICF" className="h-9 w-auto object-contain" />
+              </div>
             </div>
           </div>
 
@@ -42,10 +44,10 @@ export function Footer() {
                   </a>
                 </li>
               ))}
-              <li>
-                <a href="https://circlechess.com/registration?id=49733" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 text-sm font-black flex items-center gap-2 uppercase tracking-widest">
-                  Register Official
-                  <ExternalLink className="w-3 h-3" />
+              <li className="flex items-center">
+                <a href="https://circlechess.com/registration?id=49733" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 text-sm font-black flex items-center gap-2 uppercase tracking-widest group/reg whitespace-nowrap">
+                  Click here to register
+                  <ExternalLink className="w-3 h-3 transition-transform group-hover/reg:translate-x-0.5 group-hover/reg:-translate-y-0.5" />
                 </a>
               </li>
             </ul>
@@ -70,12 +72,21 @@ export function Footer() {
             </div>
           </div>
 
-          {/* Organizer */}
-          <div className="text-center md:text-left">
-            <h4 className="text-zinc-900 font-black mb-6 uppercase tracking-widest text-[10px]">Organized & Marketed By</h4>
-            <div className="bg-white p-6 rounded-[2rem] border border-zinc-100 shadow-xl shadow-zinc-200/50 max-w-sm mx-auto md:mx-0">
-              <p className="text-blue-600 font-black text-lg mb-1 tracking-tight">EventAtScale</p>
-              <p className="text-zinc-400 font-bold text-[10px] mb-0 uppercase tracking-widest leading-relaxed">EVENT MANAGEMENT & MARKETING SOLUTIONS</p>
+          {/* Partners Column */}
+          <div className="flex flex-col gap-6">
+            <div className="flex items-center gap-4">
+              <h4 className="text-zinc-900 font-black uppercase tracking-widest text-[10px] whitespace-nowrap min-w-[80px]">Organized By</h4>
+              <div className="bg-white p-2.5 px-4 rounded-xl border border-zinc-100 shadow-lg shadow-zinc-200/50 flex items-center gap-3">
+                <p className="text-blue-600 font-black text-[10px] tracking-tight whitespace-nowrap">Skillcraft</p>
+                <img src="/logo.jpg" alt="SkillCraft Logo" className="h-7 w-auto object-contain" />
+              </div>
+            </div>
+            <div className="flex items-center gap-4">
+              <h4 className="text-zinc-900 font-black uppercase tracking-widest text-[10px] whitespace-nowrap min-w-[80px]">Marketed By</h4>
+              <div className="bg-white p-2.5 px-4 rounded-xl border border-zinc-100 shadow-lg shadow-zinc-200/50 flex items-center gap-3">
+                <p className="text-blue-600 font-black text-[10px] tracking-tight whitespace-nowrap">EventAtScale</p>
+                <img src="/EAS-logo.png" alt="EAS Logo" className="h-7 w-auto object-contain" />
+              </div>
             </div>
           </div>
 

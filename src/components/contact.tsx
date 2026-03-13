@@ -151,7 +151,7 @@ export function Contact() {
                     </div>
                     <Button variant="outline" className="w-full h-12 rounded-2xl text-[10px] font-black uppercase tracking-widest border-zinc-200 hover:border-blue-600 hover:text-blue-600 bg-white shadow-sm" asChild>
                       <a href="https://forms.gle/w8ADhgE5eSAzZBH39" target="_blank" rel="noopener noreferrer">
-                        <Globe className="w-3.5 h-3.5 mr-2" /> Book Stay
+                        <Globe className="w-3.5 h-3.5 mr-2" /> click here to book accomodation
                       </a>
                     </Button>
                   </div>
