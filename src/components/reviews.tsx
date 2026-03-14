@@ -64,16 +64,12 @@ export function Reviews() {
                 
                 {/* Play Overlay */}
                 <div className="absolute inset-0 flex flex-col items-center justify-center p-8 bg-black/5 group-hover:bg-black/20 transition-all duration-500">
-                  <div className="w-20 h-20 rounded-full bg-blue-600 flex items-center justify-center shadow-lg group-hover:scale-110 group-hover:bg-blue-700 transition-all duration-300 mb-6 group-hover:shadow-blue-200">
+                  <div className="w-20 h-20 rounded-full bg-blue-600 flex items-center justify-center shadow-lg group-hover:scale-110 group-hover:bg-blue-700 transition-all duration-300 group-hover:shadow-blue-200">
                     <div className="w-0 h-0 border-t-[12px] border-t-transparent border-l-[22px] border-l-white border-b-[12px] border-b-transparent ml-2"></div>
                   </div>
-                  <h4 className="text-white text-xl font-black text-center transition-colors bg-zinc-900/80 backdrop-blur-md px-6 py-2 rounded-2xl border border-white/20">{video.title}</h4>
                 </div>
 
-                <div className="absolute top-6 right-6 bg-white/90 backdrop-blur-xl px-4 py-2 rounded-2xl border border-zinc-100 flex items-center gap-2 shadow-lg">
-                  <div className="w-2.5 h-2.5 rounded-full bg-blue-500"></div>
-                  <span className="text-[12px] font-black text-zinc-900 uppercase tracking-widest">Official Highlights</span>
-                </div>
+                {/* Tag removed as requested */}
               </a>
             </motion.div>
           ))}

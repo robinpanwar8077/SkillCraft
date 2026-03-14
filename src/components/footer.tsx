@@ -76,17 +76,16 @@ export function Footer() {
           <div className="flex flex-col gap-6">
             <div className="flex items-center gap-4">
               <h4 className="text-zinc-900 font-black uppercase tracking-widest text-[10px] whitespace-nowrap min-w-[80px]">Organized By</h4>
-              <div className="bg-white p-2.5 px-4 rounded-xl border border-zinc-100 shadow-lg shadow-zinc-200/50 flex items-center gap-3">
-                <p className="text-blue-600 font-black text-[10px] tracking-tight whitespace-nowrap">Skillcraft</p>
-                <img src="/logo.jpg" alt="SkillCraft Logo" className="h-7 w-auto object-contain" />
+              <div className="flex items-center gap-3">
+                <p className="text-blue-600 font-black text-xs tracking-tight whitespace-nowrap">Skillcraft</p>
+                <img src="/logo.jpg" alt="EAS Logo" className="h-10 w-auto object-contain mix-blend-multiply" />
+
+
               </div>
             </div>
             <div className="flex items-center gap-4">
               <h4 className="text-zinc-900 font-black uppercase tracking-widest text-[10px] whitespace-nowrap min-w-[80px]">Marketed By</h4>
-              <div className="bg-white p-2.5 px-4 rounded-xl border border-zinc-100 shadow-lg shadow-zinc-200/50 flex items-center gap-3">
-                <p className="text-blue-600 font-black text-[10px] tracking-tight whitespace-nowrap">EventAtScale</p>
-                <img src="/EAS-logo.png" alt="EAS Logo" className="h-7 w-auto object-contain" />
-              </div>
+              <img src="/EAS-logo.png" alt="EAS Logo" className="h-10 w-auto object-contain mix-blend-multiply" />
             </div>
           </div>
 

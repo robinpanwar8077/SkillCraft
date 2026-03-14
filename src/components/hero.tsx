@@ -136,6 +136,10 @@ export function Hero() {
             <div>
               <span className="block text-[8px] sm:text-[10px] text-white/40 uppercase font-black tracking-widest mb-1">Venue</span>
               <span className="text-white font-bold text-sm sm:text-lg">Thyagraj Sports Complex</span>
+              <div className="flex items-center gap-2 mt-2 transition-all duration-300">
+                <span className="text-[9px] font-black text-blue-400 uppercase tracking-widest">Click here for Google Map</span>
+                <div className="w-4 h-[1px] bg-blue-400 rounded-full" />
+              </div>
             </div>
           </a>
         </motion.div>
