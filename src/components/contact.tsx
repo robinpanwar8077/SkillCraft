@@ -133,15 +133,15 @@ export function Contact() {
                     <p className="text-[8px] font-black text-blue-400 uppercase tracking-widest leading-none mb-1">Chief Arbiter</p>
                     <div className="flex flex-col justify-center gap-1">
                       <p className="text-zinc-900 font-black text-xs sm:text-sm tracking-tight">IA Atul Mishra</p>
-                      <p className="text-blue-600 font-black text-[9px] sm:text-xs truncate uppercase tracking-tighter">mishraatul150@gmail.com</p>
+                      <p className="text-blue-600 font-black text-[9px] sm:text-xs uppercase tracking-tighter">mishraatul150@gmail.com</p>
                     </div>
                   </div>
                 </div>
 
                 <div className="mt-8 pt-8 border-t border-zinc-100">
-                  <div className="flex items-center gap-3 mb-4 bg-blue-50 py-3 px-6 rounded-xl border border-blue-100 w-full justify-center sm:justify-start transition-colors hover:bg-blue-100/50">
+                  <div className="flex items-center gap-3 mb-4 bg-blue-50 py-3 px-4 sm:px-6 rounded-xl border border-blue-100 w-full justify-center sm:justify-start transition-colors hover:bg-blue-100/50">
                     <Mail className="w-5 h-5 text-blue-600 shrink-0" />
-                    <span className="text-[11px] sm:text-sm font-black text-blue-600 uppercase tracking-widest select-all truncate">Teamskillcraft@skillcraft.co.in</span>
+                    <span className="text-[10px] sm:text-sm font-black text-blue-600 uppercase tracking-widest select-all text-center sm:text-left break-all">Teamskillcraft@skillcraft.co.in</span>
                   </div>
 
                   <div className="space-y-4">

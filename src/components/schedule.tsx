@@ -90,8 +90,8 @@ export function Schedule() {
 
                       <div className="flex-grow min-w-0">
                         <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
-                          <h4 className="text-base sm:text-2xl font-black text-zinc-900 tracking-tight uppercase leading-tight truncate">{item.event}</h4>
-                          <span className={`w-fit px-3 py-0.5 rounded-full text-[8px] font-black uppercase tracking-widest border ${item.category === 'Match'
+                          <h4 className="text-base sm:text-2xl font-black text-zinc-900 tracking-tight uppercase leading-tight break-words">{item.event}</h4>
+                          <span className={`w-fit px-3 py-0.5 rounded-full text-[8px] font-black uppercase tracking-widest border shrink-0 ${item.category === 'Match'
                             ? 'bg-blue-50 text-blue-600 border-blue-100'
                             : 'bg-zinc-100 text-zinc-500 border-zinc-200'
                             }`}>
