@@ -69,10 +69,34 @@ export function Hero() {
       >
         {/* Top Badges */}
         <motion.div variants={itemVariants} className="flex flex-col items-center gap-3 sm:gap-4 mb-6 sm:mb-8">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-blue-300 text-[9px] sm:text-xs font-black uppercase tracking-[0.2em]">
-            <Sparkles className="w-3 h-3 animate-pulse" />
-            Below 1800 Classical Chess Series
+          <div className="flex flex-col items-center gap-3">
+            {/* New Smaller Blinking Button */}
+            <Button
+              size="sm"
+              className="h-8 px-4 rounded-full border border-red-500/50 bg-red-500/20 backdrop-blur-md text-white hover:bg-red-500/30 hover:border-red-500/80 font-black text-[10px] uppercase tracking-wider transition-all shadow-lg shadow-red-500/20 animate-pulse"
+              asChild
+            >
+              <a
+                href="https://s3.chess-results.com/tnr1343488.aspx?lan=1&SNode=S0&tno=1343488&zeilen=99999"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2"
+              >
+                <span className="relative flex h-2 w-2">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-red-500"></span>
+                </span>
+                Click here to check Players Live Status Update
+              </a>
+            </Button>
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-blue-300 text-[9px] sm:text-xs font-black uppercase tracking-[0.2em]">
+              <Sparkles className="w-3 h-3 animate-pulse" />
+              Below 1800 Classical Chess Series
+            </div>
+
+
           </div>
+
           <div className="flex flex-wrap items-center justify-center gap-x-3 gap-y-2">
             <div className="flex items-center gap-1.5 text-white/80 text-[10px] sm:text-sm font-medium bg-white/10 backdrop-blur-md px-3 py-1 rounded-lg border border-white/15">
               <ShieldCheck className="w-3.5 h-3.5 text-blue-400" />
@@ -126,9 +150,9 @@ export function Hero() {
               <span className="text-white font-bold text-sm sm:text-lg">27th – 29th March 2026</span>
             </div>
           </div>
-          <a 
-            href="https://maps.google.com/?q=Thyagraj+Sports+Complex+INA+New+Delhi" 
-            target="_blank" 
+          <a
+            href="https://maps.google.com/?q=Thyagraj+Sports+Complex+INA+New+Delhi"
+            target="_blank"
             rel="noopener noreferrer"
             className="bg-white/10 backdrop-blur-md border border-white/20 p-4 sm:p-5 rounded-3xl flex flex-row sm:flex-col items-center justify-center gap-4 sm:gap-2 group hover:border-blue-400/50 hover:bg-white/15 transition-all text-left sm:text-center shadow-sm"
           >
@@ -145,27 +169,29 @@ export function Hero() {
         </motion.div>
 
         {/* CTA Buttons */}
-        <motion.div variants={itemVariants} className="flex flex-col sm:flex-row items-center gap-4 sm:gap-6 w-full max-w-sm sm:max-w-none justify-center px-4 sm:px-0 mb-10 sm:mb-14">
-          <Button
-            size="lg"
-            className="h-14 sm:h-16 px-8 sm:px-10 rounded-2xl bg-blue-600 text-white hover:bg-blue-500 font-black text-base sm:text-lg w-full sm:w-auto shadow-lg shadow-blue-500/30 hover:shadow-blue-500/40 transition-all hover:-translate-y-1 active:translate-y-0 group"
-            asChild
-          >
-            <a href="https://circlechess.com/registration?id=49733" target="_blank" rel="noopener noreferrer">
-              Register Now
-              <ChevronRight className="ml-2 w-5 h-5 sm:w-6 sm:h-6 group-hover:translate-x-1 transition-transform" />
-            </a>
-          </Button>
-          <Button
-            variant="outline"
-            size="lg"
-            className="h-14 sm:h-16 px-8 sm:px-10 rounded-2xl border-2 border-white/30 bg-white/10 backdrop-blur-md text-white hover:bg-white/20 hover:border-white/50 font-bold text-base sm:text-lg w-full sm:w-auto transition-all shadow-sm"
-            asChild
-          >
-            <a href="/Brochure.pdf" download="Tournament_Brochure.pdf">
-              Download Brochure
-            </a>
-          </Button>
+        <motion.div variants={itemVariants} className="flex flex-col items-center gap-4 sm:gap-6 w-full max-w-4xl justify-center px-4 sm:px-0 mb-10 sm:mb-14">
+          <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-6 w-full justify-center">
+            <Button
+              size="lg"
+              className="h-14 sm:h-16 px-8 sm:px-10 rounded-2xl bg-blue-600 text-white hover:bg-blue-500 font-black text-base sm:text-lg w-full sm:w-auto shadow-lg shadow-blue-500/30 hover:shadow-blue-500/40 transition-all hover:-translate-y-1 active:translate-y-0 group"
+              asChild
+            >
+              <a href="https://circlechess.com/registration?id=49733" target="_blank" rel="noopener noreferrer">
+                Register Now
+                <ChevronRight className="ml-2 w-5 h-5 sm:w-6 sm:h-6 group-hover:translate-x-1 transition-transform" />
+              </a>
+            </Button>
+            <Button
+              variant="outline"
+              size="lg"
+              className="h-14 sm:h-16 px-8 sm:px-10 rounded-2xl border-2 border-white/30 bg-white/10 backdrop-blur-md text-white hover:bg-white/20 hover:border-white/50 font-bold text-base sm:text-lg w-full sm:w-auto transition-all shadow-sm"
+              asChild
+            >
+              <a href="/Brochure.pdf" download="Tournament_Brochure.pdf">
+                Download Brochure
+              </a>
+            </Button>
+          </div>
         </motion.div>
 
         {/* Stat chips
