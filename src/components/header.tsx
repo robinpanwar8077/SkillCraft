@@ -38,7 +38,7 @@ export function Header() {
         >
           {Array.from({ length: 12 }).map((_, i) => (
             <span key={i} className="inline-flex items-center gap-4 px-6 text-[10px] md:text-sm font-black uppercase tracking-[0.2em] text-black">
-              ♟ Delhi&apos;s Biggest Chess Tournament
+              ♟ Delhi&apos;s Biggest Chess Tournament of 2026
               <span className="text-black/50">✦</span>
             </span>
           ))}

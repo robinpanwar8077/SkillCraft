@@ -115,11 +115,15 @@ export function Contact() {
                   {[
                     { name: "Mr. Sushant Tiwari", role: "Tournament Director", contact: "+91 9911 07 2629" },
                     { name: "Mr. Sarthak Sikdar", role: "Sponsorship", contact: "+91 9911 80 0399" },
+                    { name: "Mr. Vishwanath Raghav", role: "Organizing Secretary", contact: "+91 76784 56081" },
 
-                    { name: "IA Shardul Sharma", role: "Technical Queries", contact: "+91 9667 72 8720" },
+                    { name: "Mr. Vatsal Makol", role: "Co-Ordinator", contact: "+91 7709 01 2353" }, { name: "Mr. Hariom Solanki", role: "Registration", contact: "+91 95820 30354" },
+
                     { name: "Mr. Prabindra Mani", role: "Registration", contact: "+91 9717 13 0205" },
-                    { name: "Mr. Hariom Solanki", role: "Registration", contact: "+91 95820 30354" },
-                    { name: "Mr. Vatsal Makol", role: "Co-Ordinator", contact: "+91 7709 01 2353" },
+                    { name: "IA Atul Mishra", role: "Chief Arbiter", contact: "mishraatul150@gmail.com" },
+                    { name: "IA Shardul Sharma", role: "Technical Queries", contact: "+91 9667 72 8720" },
+
+
                   ].map((item, idx) => (
                     <div key={idx} className="p-3 rounded-2xl bg-zinc-50/50 border border-zinc-100/50 hover:bg-blue-50/30 hover:border-blue-100 transition-all flex flex-col justify-center">
                       <p className="text-[8px] font-black text-blue-400 uppercase tracking-widest leading-none mb-1">{item.role}</p>
@@ -129,13 +133,13 @@ export function Contact() {
                   ))}
 
                   {/* IA Atul Mishra with Email */}
-                  <div className="p-3 rounded-2xl bg-zinc-50/50 border border-zinc-100/50 hover:bg-blue-50/30 hover:border-blue-100 transition-all flex flex-col justify-center col-span-1 sm:col-span-2">
+                  {/* <div className="p-3 rounded-2xl bg-zinc-50/50 border border-zinc-100/50 hover:bg-blue-50/30 hover:border-blue-100 transition-all flex flex-col justify-center col-span-1 sm:col-span-2">
                     <p className="text-[8px] font-black text-blue-400 uppercase tracking-widest leading-none mb-1">Chief Arbiter</p>
                     <div className="flex flex-col justify-center gap-1">
                       <p className="text-zinc-900 font-black text-xs sm:text-sm tracking-tight">IA Atul Mishra</p>
                       <p className="text-blue-600 font-black text-[9px] sm:text-xs uppercase tracking-tighter">mishraatul150@gmail.com</p>
                     </div>
-                  </div>
+                  </div> */}
                 </div>
 
                 <div className="mt-8 pt-8 border-t border-zinc-100">
