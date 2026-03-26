@@ -74,21 +74,6 @@ export function Reviews() {
             </motion.div>
           ))}
         </div>
-
-        <div className="mt-24 flex flex-col items-center gap-8 border-t border-zinc-100 pt-16">
-          <div className="flex flex-col items-center gap-4">
-            <span className="text-black text-[10px] font-black uppercase tracking-[0.3em]">Gold Sponsor</span>
-            <div className="flex items-center gap-6 py-6 px-12 rounded-3xl bg-zinc-50 border border-zinc-200 shadow-sm relative group overflow-hidden">
-              <div className="absolute inset-0 bg-blue-500/0 group-hover:bg-blue-500/5 transition-colors duration-500"></div>
-              <img src="/surya-roshni-ltd-logo-vector.svg" alt="Surya Logo" className="h-12 w-auto object-contain relative z-10" />
-              <div className="w-px h-10 bg-zinc-200 relative z-10"></div>
-              <div className="relative z-10 text-left">
-                <span className="block text-zinc-900 text-xl font-black tracking-tight uppercase leading-none">Surya Roshni Ltd</span>
-                <span className="block text-blue-600 text-[10px] font-black tracking-widest uppercase mt-1">Lighting the Nation</span>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
   );

@@ -87,7 +87,7 @@ export function Footer() {
             </div>
             <div className="flex items-center gap-4">
               <h4 className="text-zinc-900 font-black uppercase tracking-widest text-[10px] whitespace-nowrap min-w-[80px]">Gold Sponsor</h4>
-              <img src="/surya-roshni-ltd-logo-vector.svg" alt="Surya Logo" className="h-8 w-auto object-contain" />
+              <img src="/surya-roshni-ltd-logo-vector.svg" alt="Surya Logo" className="h-14 w-auto object-contain" />
             </div>
           </div>
 
