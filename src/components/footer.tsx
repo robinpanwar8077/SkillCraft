@@ -73,19 +73,21 @@ export function Footer() {
           </div>
 
           {/* Partners Column */}
-          <div className="flex flex-col gap-6">
+          <div className="flex flex-col sm:flex-row lg:flex-col gap-6 lg:gap-8">
             <div className="flex items-center gap-4">
               <h4 className="text-zinc-900 font-black uppercase tracking-widest text-[10px] whitespace-nowrap min-w-[80px]">Organized By</h4>
               <div className="flex items-center gap-3">
                 <p className="text-blue-600 font-black text-xs tracking-tight whitespace-nowrap">Skillcraft</p>
                 <img src="/logo.jpg" alt="EAS Logo" className="h-10 w-auto object-contain mix-blend-multiply" />
-
-
               </div>
             </div>
             <div className="flex items-center gap-4">
               <h4 className="text-zinc-900 font-black uppercase tracking-widest text-[10px] whitespace-nowrap min-w-[80px]">Marketed By</h4>
               <img src="/EAS-logo.png" alt="EAS Logo" className="h-10 w-auto object-contain mix-blend-multiply" />
+            </div>
+            <div className="flex items-center gap-4">
+              <h4 className="text-zinc-900 font-black uppercase tracking-widest text-[10px] whitespace-nowrap min-w-[80px]">Gold Sponsor</h4>
+              <img src="/surya-roshni-ltd-logo-vector.svg" alt="Surya Logo" className="h-8 w-auto object-contain" />
             </div>
           </div>
 
@@ -96,7 +98,14 @@ export function Footer() {
             © {currentYear} SkillCraft International Chess Tournament. All Rights Reserved. <br />
             <span className="text-zinc-300">Tournament Code: AICF-430122 | FIDE Rated Below 1800 Classical</span>
           </p>
-
+          <a
+            href="https://eventatscale.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-zinc-400 text-[10px] font-bold uppercase tracking-widest hover:text-blue-600 transition-colors"
+          >
+            Designed & Developed by <span className="text-blue-600">Event At Scale</span>
+          </a>
         </div>
       </div>
     </footer>

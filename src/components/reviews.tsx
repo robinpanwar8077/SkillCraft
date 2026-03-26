@@ -56,12 +56,12 @@ export function Reviews() {
                 className="group relative aspect-video rounded-[2.5rem] overflow-hidden border-2 border-zinc-100 bg-white block shadow-xl hover:border-blue-400/50 transition-all duration-500"
               >
                 {/* Thumbnail */}
-                <img 
+                <img
                   src={`https://img.youtube.com/vi/${video.id}/maxresdefault.jpg`}
                   alt={video.title}
                   className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-all duration-700 group-hover:scale-105"
                 />
-                
+
                 {/* Play Overlay */}
                 <div className="absolute inset-0 flex flex-col items-center justify-center p-8 bg-black/5 group-hover:bg-black/20 transition-all duration-500">
                   <div className="w-20 h-20 rounded-full bg-blue-600 flex items-center justify-center shadow-lg group-hover:scale-110 group-hover:bg-blue-700 transition-all duration-300 group-hover:shadow-blue-200">
@@ -76,14 +76,18 @@ export function Reviews() {
         </div>
 
         <div className="mt-24 flex flex-col items-center gap-8 border-t border-zinc-100 pt-16">
-           <div className="flex items-center gap-6 py-6 px-12 rounded-3xl bg-zinc-50 border border-zinc-200 shadow-sm relative group overflow-hidden">
-             <div className="absolute inset-0 bg-blue-500/0 group-hover:bg-blue-500/5 transition-colors duration-500"></div>
-             <Trophy className="w-10 h-10 text-blue-600 relative z-10" />
-             <div className="relative z-10 text-left">
-               <span className="block text-zinc-900 text-xl font-black tracking-tight uppercase">FIDE Rated Series</span>
-               <span className="block text-blue-600 text-xs font-black font-mono tracking-widest uppercase mt-1">AICF Event Code: 430122</span>
-             </div>
-           </div>
+          <div className="flex flex-col items-center gap-4">
+            <span className="text-black text-[10px] font-black uppercase tracking-[0.3em]">Gold Sponsor</span>
+            <div className="flex items-center gap-6 py-6 px-12 rounded-3xl bg-zinc-50 border border-zinc-200 shadow-sm relative group overflow-hidden">
+              <div className="absolute inset-0 bg-blue-500/0 group-hover:bg-blue-500/5 transition-colors duration-500"></div>
+              <img src="/surya-roshni-ltd-logo-vector.svg" alt="Surya Logo" className="h-12 w-auto object-contain relative z-10" />
+              <div className="w-px h-10 bg-zinc-200 relative z-10"></div>
+              <div className="relative z-10 text-left">
+                <span className="block text-zinc-900 text-xl font-black tracking-tight uppercase leading-none">Surya Roshni Ltd</span>
+                <span className="block text-blue-600 text-[10px] font-black tracking-widest uppercase mt-1">Lighting the Nation</span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
